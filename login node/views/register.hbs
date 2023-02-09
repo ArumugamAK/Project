@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{> header }}
+<body>
+    <div class="container">
+        <div class="text">Registration</div>
+        {{#if msg}}
+        <p class="{{msg_type}}">{{msg}}</p>
+        {{/if}}
+        <form action="/auth/register" method="post">
+            <div class="data">
+                <label for="Name">Full Name</label>
+                <input type="text" Name="name" id="name">
+            </div>
+            <div class="data">
+                <label for="email">Email</label>
+                <input type="email" Name="email" id="email">
+            </div>
+            <div class="data">
+                <label for="Password">Password</label>
+                <input type="password" Name="Password" id="Password">
+            </div>
+            <div class="data">
+                <label for="confirm-Password">confirm-Password</label>
+                <input type="password" Name="confirm_Password" id="confirm_Password">
+            </div>
+            <div class="btn">
+                <button type="submit">REGISTER</button>
+            </div>
+            <div class="signup-link">already a member ?
+                <a href="/">Login Now</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
